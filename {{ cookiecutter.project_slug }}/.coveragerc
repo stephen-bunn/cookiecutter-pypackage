@@ -1,0 +1,8 @@
+[run]
+branch = True
+parallel = True
+source =
+    src/{{ cookiecutter.package_name }}/
+
+[report]
+show_missing = True
