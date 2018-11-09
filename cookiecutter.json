@@ -7,7 +7,7 @@
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-')}}",
     "package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
     "package_version": "0.0.0",
-    "package_license": ["MIT", "ISC"],
+    "package_license": ["ISC", "MIT"],
     "github_username": "stephen-bunn",
     "github_url": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}",
     "licenses": {
