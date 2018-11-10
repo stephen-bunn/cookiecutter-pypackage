@@ -73,7 +73,7 @@ def get_previous_version(ctx):
     ]
     try:
         version = max(parver.Version.parse(ver).normalize() for ver in tags if ver)
-    except ValueError:
+    except ValueError, subprocess.CalledProcessError:
         version = parver.Version.parse("0.0.0")
     return version
 
