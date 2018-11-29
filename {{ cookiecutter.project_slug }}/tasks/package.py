@@ -97,3 +97,21 @@ def version(ctx, version=None, force=False):
                 )
                 content = re.sub(pattern, sub.format(version=version), content, re.M)
             path.write_text(content)
+
+
+@invoke.task
+def stub(ctx):
+    """ Generate typing stubs for the package.
+    """
+
+    report.info(ctx, "package.stub", f"generating typing stubs for package")
+    ctx.run("pytype")
+
+
+@invoke.task(pre=[stub])
+def typecheck(ctx):
+    """ Run type checking with generated package stubs.
+    """
+
+    report.info(ctx, "package.typecheck", f"typechecking package")
+    ctx.run(f"mypy")
