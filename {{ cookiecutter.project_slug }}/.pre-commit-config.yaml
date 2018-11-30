@@ -19,14 +19,6 @@ repos:
     hooks:
       - id: isort
 
-  - repo: local
-    hooks:
-      - id: pytype
-        name: pytype
-        entry: pipenv run inv package.stub
-        language: system
-        types: [python]
-
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v0.641
     hooks:
