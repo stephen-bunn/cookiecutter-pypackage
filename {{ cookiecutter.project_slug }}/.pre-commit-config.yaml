@@ -23,7 +23,7 @@ repos:
     hooks:
       - id: pytype
         name: pytype
-        entry: pipenv run pytype
+        entry: pipenv run inv package.stub
         language: system
         types: [python]
 
