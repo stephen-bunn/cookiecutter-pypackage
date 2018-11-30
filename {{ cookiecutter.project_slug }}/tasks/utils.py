@@ -6,7 +6,7 @@ import subprocess
 
 import parver
 import colorama
-from towncrier._builder import find_fragments, render_fragments, split_fragments
+from towncrier._builder import find_fragments, split_fragments, render_fragments
 from towncrier._settings import load_config
 
 colorama.init()

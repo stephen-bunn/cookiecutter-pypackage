@@ -8,7 +8,7 @@ import invoke
 import parver
 
 from . import docs, package
-from .utils import report, get_previous_version, get_tag_content, get_artifact_paths
+from .utils import report, get_tag_content, get_artifact_paths, get_previous_version
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent.parent
 
