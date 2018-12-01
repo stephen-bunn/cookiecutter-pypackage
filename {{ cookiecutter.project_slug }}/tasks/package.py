@@ -114,4 +114,4 @@ def typecheck(ctx):
     """
 
     report.info(ctx, "package.typecheck", f"typechecking package")
-    ctx.run(f"mypy")
+    ctx.run(f"mypy {ctx.package.directory!s}")
