@@ -8,6 +8,8 @@
   "package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
   "package_version": "0.0.0",
   "package_license": ["ISC", "MIT"],
+  "package_keywords": "{{ cookiecutter.project_name }}",
+  "package_platform": ["any", "Linux", "MacOS", "Windows"],
   "github_username": "stephen-bunn",
   "github_url": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}",
   "initialize_git_repository": "y",
