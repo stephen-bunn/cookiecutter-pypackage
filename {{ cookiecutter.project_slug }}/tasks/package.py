@@ -52,6 +52,48 @@ def build(ctx):
     ctx.run(build_command)
 
 
+@invoke.task(pre=[build])
+def check(ctx):
+    """ Check built package is valid.
+    """
+
+    check_command = f"twine check {ctx.directory!s}/dist/*"
+    report.info(ctx, "package.check", "checking package")
+    ctx.run(check_command)
+
+
+@invoke.task
+def licenses(
+    ctx,
+    summary=False,
+    from_classifier=False,
+    with_system=False,
+    with_authors=False,
+    with_urls=False,
+):
+    """ List dependency licenses.
+    """
+
+    licenses_command = "pip-licenses --order=license"
+    report.info(ctx, "package.licenses", "listing licenses of package dependencies")
+    if summary:
+        report.debug(ctx, "package.licenses", "summarizing licenses")
+        licenses_command += " --summary"
+    if from_classifier:
+        report.debug(ctx, "package.licenses", "reporting from classifiers")
+        licenses_command += " --from-classifier"
+    if with_system:
+        report.debug(ctx, "package.licenses", "including system packages")
+        licenses_command += " --with-system"
+    if with_authors:
+        report.debug(ctx, "package.licenses", "including package authors")
+        licenses_command += " --with-authors"
+    if with_urls:
+        report.debug(ctx, "package.licenses", "including package urls")
+        licenses_command += " --with-urls"
+    ctx.run(licenses_command)
+
+
 @invoke.task
 def version(ctx, version=None, force=False):
     """ Specify a new version for the package.

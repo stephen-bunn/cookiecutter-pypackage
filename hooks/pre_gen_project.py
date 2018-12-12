@@ -8,3 +8,6 @@ if not shutil.which("git"):
 
 if not shutil.which("pipenv"):
     raise EnvironmentError(f"this cookiecutter requires pipenv")
+
+if not shutil.which("python3.7"):
+    raise EnvironmentError(f"this cookiecutter requires that python3.7 can be found")

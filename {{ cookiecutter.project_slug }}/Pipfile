@@ -7,27 +7,6 @@ name = "pypi"
 {{ cookiecutter.project_slug }} = {path = ".", editable = true, extras = ["test", "docs", "dev"]}
 
 [dev-packages]
-tox = "*"
-"flake8" = "*"
-black = "*"
-isort = "*"
-pytest = "==3.9.3"
-pytest-xdist = "*"
-"pytest-flake8" = "*"
-hypothesis = "*"
-sphinx = "*"
-codacy-coverage = "*"
-pytest-cov = "*"
-coverage = "==4.5.1"
-pytest-sugar = "*"
-invoke = "*"
-parver = "*"
-towncrier = "*"
-colorama = "*"
-vprof = "*"
-mypy = "*"
-pytype = "*"
-pre-commit = "*"
 
 [requires]
 python_version = "3.7"

@@ -39,7 +39,7 @@ def profile(ctx, filepath):
         ctx.run(f"vprof -c cmhp {filepath!s}")
 
 
-@invoke.task(post=[docs.build, package.build])
+@invoke.task(post=[docs.build, package.build, package.check])
 def build(ctx):
     """ Build the project.
     """
