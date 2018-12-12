@@ -121,7 +121,7 @@ def publish(ctx, test=False):
         ctx.run(git_reset_command)
 
 
-namespace = invoke.Collection(build, clean, publish, docs, package)
+namespace = invoke.Collection(build, clean, publish, docs, package, profile)
 namespace.configure(
     {
         "metadata": metadata,
