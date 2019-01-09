@@ -18,7 +18,7 @@ vprof = "*"
 mypy = "*"
 pytype = "*"
 pre-commit = "*"
-readme_renderer = {version = "*",extras = ["md"]}
+readme_renderer = {version = "*", extras = ["md"]}
 pip-licenses = "*"
 
 [requires]
