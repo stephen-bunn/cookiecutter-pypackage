@@ -21,6 +21,7 @@ pytype = "*"
 pre-commit = "*"
 readme_renderer = {version = "*", extras = ["md"]}
 pip-licenses = "*"
+rope = "*"
 
 [requires]
 python_version = "3.7"
