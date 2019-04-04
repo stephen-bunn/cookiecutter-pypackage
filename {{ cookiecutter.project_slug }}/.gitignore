@@ -13,6 +13,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
+pip-wheel-metadata/
 develop-eggs/
 dist/
 downloads/
@@ -104,8 +105,13 @@ venv.bak/
 
 # End of https://www.gitignore.io/api/python
 
-# custom
-Pipfile.lock
+# vscode
 .vscode/
+
+# Pipenv
+Pipfile.lock
+
+# misc
 reports/
 main.py
+coverage.xml
