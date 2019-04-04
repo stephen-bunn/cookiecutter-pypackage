@@ -111,7 +111,9 @@ venv.bak/
 # Pipenv
 Pipfile.lock
 
+# Coverage
+coverage.xml
+
 # misc
 reports/
 main.py
-coverage.xml
