@@ -8,7 +8,7 @@ if "{{ cookiecutter.initialize_git_repository }}".strip().lower() == "y":
     os.system("git init")
 
 if "{{ cookiecutter.build_virtual_environment }}".strip().lower() == "y":
-    python_path = shutil.which("python3.7")
+    python_path = shutil.which("python")
     pipenv_command = "pipenv install --dev"
     if python_path:
         pipenv_command = pipenv_command + f" --python {python_path}"
